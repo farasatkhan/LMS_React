@@ -6,6 +6,9 @@ import { IndividualStudentResult } from './components/IndividualStudentResult';
 import { Materials } from './components/Materials';
 import { NotFound } from './components/NotFound';
 
+import {Graph} from './components/Graph';
+import {Table} from './components/Table';
+
 function App() {
 
   return (
@@ -13,10 +16,14 @@ function App() {
       <ul>
         <li><Link to='/student_result/63ad59c91ae564e73659044a'>StudentResult</Link></li>
         <li><Link to='/materials'>Materials</Link></li>
+        <li><Link to='/graph'>Graph</Link></li>
+        <li><Link to='/table'>Table</Link></li>
       </ul>
       <Routes>
         <Route path="/student_result/:sid" element={<IndividualStudentResult />}/>
         <Route path="/materials" element={<Materials />}/>
+        <Route path="/graph" element={<Graph />} />
+        <Route path="/table" element={<Table />} />
         <Route path='*' element={<NotFound />}/>
       </Routes>
     </>
