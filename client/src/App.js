@@ -9,6 +9,8 @@ import { NotFound } from './components/NotFound';
 import {Graph} from './components/Graph';
 import {Table} from './components/Table';
 
+import { Classes } from './components/Classes';
+
 function App() {
 
   return (
@@ -18,12 +20,14 @@ function App() {
         <li><Link to='/materials'>Materials</Link></li>
         <li><Link to='/graph'>Graph</Link></li>
         <li><Link to='/table'>Table</Link></li>
+        <li><Link to='/classes'>Classes</Link></li>
       </ul>
       <Routes>
         <Route path="/student_result/:sid" element={<IndividualStudentResult />}/>
         <Route path="/materials" element={<Materials />}/>
         <Route path="/graph" element={<Graph />} />
         <Route path="/table" element={<Table />} />
+        <Route path="/classes" element={<Classes />} />
         <Route path='*' element={<NotFound />}/>
       </Routes>
     </>
